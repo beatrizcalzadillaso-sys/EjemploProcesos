@@ -17,13 +17,20 @@ public class ExecNotepad {
 		
 		try {
 			
-			Process proceso = Runtime.getRuntime().exec(infoProceso);
+			Process procesoNotepad = Runtime.getRuntime().exec(infoProceso);
 			
-			System.out.println("El ID del proceso es "+proceso.pid());
+			System.out.println("El ID del proceso es "+procesoNotepad.pid());
 			
-			int returnCode= proceso.waitFor();
+			int returnCode= procesoNotepad.waitFor();
 			
-			System.out.println("Fin del Proceso con el codigo "+returnCode);
+			if(returnCode ==0) {
+				System.out.println("Cerrado el notepad, fin del Proceso con el codigo "+returnCode);
+			}
+			else {
+				System.out.println("Hubo un error de ejecucion del notepad");
+			}
+			
+			
 			
 		} catch (IOException|InterruptedException exception) {
 			exception.printStackTrace();
