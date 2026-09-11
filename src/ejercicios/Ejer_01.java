@@ -1,14 +1,14 @@
 /**
  * 
  */
-package runtime;
+package ejercicios;
 
 import java.io.IOException;
 
 /**
  * 
  */
-public class ExecNotepad {
+public class Ejer_01 {
 
 	public static void main(String[] args) {
 		System.out.println("Vamos a lanzar el notepad...");
